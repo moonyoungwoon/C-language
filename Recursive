@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int Recursive(int num)
+{
+    if (num == 0)
+        return 1;
+    else
+        return 2 * Recursive(num - 1);
+}
+
+int main(void)
+{
+    int num;
+    printf("정수 입력: ");
+    scanf_s("%d", &num);
+    int result = Recursive(num);
+    printf("2의 %d승은 %d입니다.", num, result);
+    return 0;
+}
