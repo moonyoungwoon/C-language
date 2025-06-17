@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int PrimeNumber(void)
+{
+    int count = 0;
+    for (int i = 2; i <= 100; i++)
+    {
+        int j;
+        for (j = 2; j < i; j++) {
+            if (i % j == 0) {
+                break;
+            }
+        }
+        if (j == i) {
+            printf("%d ", i); // 소수
+            count++;
+            if (count == 10) break;
+        }
+    }
+    return 0;
+}
+
+int main(void)
+{
+    PrimeNumber();
+}
