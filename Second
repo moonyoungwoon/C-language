@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int Second(int seconds)
+{
+    int hour, minute, second;
+    hour = seconds / 3600;
+    minute = hour / 60;
+    second = hour % 60;
+    printf("[h:%d, m:%d, s:%d] \n", hour, minute, second);
+    return 0;
+}
+
+int main(void)
+{
+    int second;
+    printf("초(second) 입력: ");
+    scanf_s("%d", &second);
+    Second(second);
+}
