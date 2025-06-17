@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int Max(int num)
+{
+    int k = 0;
+    int value = 2;
+
+    for (k = 0; value <= num; k++)
+        value *= 2;
+
+    printf("공식을 만족하는 k의 최댓값은 %d \n", k);
+    return 0;
+}
+
+int main(void)
+{
+    int num;
+    printf("상수 n 입력: ");
+    scanf_s("%d", &num);
+    Max(num);
+}
