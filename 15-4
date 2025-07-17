@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+
+void Func(char* arr, int len)
+{
+	for (int i = 0; i < len / 2; i++)
+	{
+		if (arr[i] != arr[len - 1 - i])
+		{
+			printf("회문이 아닙니다. \n");
+			return;
+		}
+	}
+	printf("회문입니다. \n");
+}
+
+int main(void)
+{
+	char arr[100];
+	int arrsize = 0;
+
+	printf("문자열 입력: ");
+	scanf_s("%s", arr, sizeof(arr));
+
+	arrsize = strlen(arr);
+
+	Func(arr, arrsize);
+}
